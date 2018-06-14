@@ -57,7 +57,7 @@ module Hbc
                  "#{cask.staged_path}/#{target_name}",
                ]
         return target_name if system '/bin/mv', *args
-        raise LGOGDownloaderException
+        raise LGOGDownloaderError.new($?, args, 'mv failed')
       end
     end
   end
