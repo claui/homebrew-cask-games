@@ -39,16 +39,21 @@ module Hbc
       end
 
       def self.installer_url(game_name, installer_id)
-        installer = games_map[game_name]
-                    .installers_map[installer_id]
+        installer = games_map
+          .fetch(game_name)
+          .installers_map
+          .fetch(installer_id)
+
         url_options = { cookies: cookies }
-        odebug [installer.download_url, url_options].inspect
         [installer.download_url, url_options]
       end
 
       def self.rename_artifact!(cask, game_name, installer_id)
-        game = games_map[game_name]
-        installer = game.installers_map[installer_id]
+        installer = games_map
+          .fetch(game_name)
+          .installers_map
+          .fetch(installer_id)
+
         target_name = installer.path.split('/').last
 
         args = [
