@@ -1,4 +1,4 @@
-module Hbc
+module Cask
   module Utils
     module GOG
       class Installer

@@ -1,7 +1,7 @@
 require 'delegate'
 require 'time'
 
-module Hbc
+module Cask
   module Utils
     module LGOGDownloader
       class GameDetailsMap < SimpleDelegator

@@ -3,7 +3,7 @@ require_relative './lgog_downloader/game_details_cache.rb'
 require_relative './lgog_downloader/game_details_map.rb'
 require_relative './lgog_downloader/lgog_downloader_error.rb'
 
-module Hbc
+module Cask
   module Utils
     module LGOGDownloader
       include Constants

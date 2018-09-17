@@ -1,7 +1,7 @@
 require 'delegate'
 require 'json'
 
-module Hbc
+module Cask
   module Utils
     module LGOGDownloader
       class GameDetailsCache < SimpleDelegator

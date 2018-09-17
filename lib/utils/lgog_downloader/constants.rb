@@ -1,4 +1,4 @@
-module Hbc
+module Cask
   module Utils
     module LGOGDownloader
       module Constants
