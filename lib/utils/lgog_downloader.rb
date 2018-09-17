@@ -40,22 +40,22 @@ module Cask
         end
       end
 
-      def self.installer_url(game_name, installer_id)
-        installer = games_map
+      def self.installer(game_name, installer_id)
+        games_map
           .fetch(game_name)
           .installers_map
           .fetch(installer_id)
+      end
 
-        url_options = { cookies: cookies }
-        [installer.download_url, url_options]
+      def self.installer_url(game_name, installer_id)
+        [
+          installer(game_name, installer_id).download_url,
+          { cookies: cookies },
+        ]
       end
 
       def self.rename_artifact!(cask, game_name, installer_id)
-        installer = games_map
-          .fetch(game_name)
-          .installers_map
-          .fetch(installer_id)
-
+        installer = self.installer(game_name, installer_id)
         target_name = installer.path.split('/').last
 
         args = [
