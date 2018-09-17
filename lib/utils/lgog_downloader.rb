@@ -1,7 +1,9 @@
-require_relative './lgog_downloader/constants.rb'
-require_relative './lgog_downloader/game_details_cache.rb'
-require_relative './lgog_downloader/game_details_map.rb'
-require_relative './lgog_downloader/lgog_downloader_error.rb'
+require 'utils/gog'
+
+require_relative './lgog_downloader/constants'
+require_relative './lgog_downloader/game_details_cache'
+require_relative './lgog_downloader/game_details_map'
+require_relative './lgog_downloader/lgog_downloader_error'
 
 module Cask
   module Utils

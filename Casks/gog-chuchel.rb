@@ -2,12 +2,7 @@ cask 'gog-chuchel' do
   version '1.0.0'
   sha256 '6fe648eb33db79ce6997dcaca3c867a0fb08b0243fc2eea39b349911c542bca4'
 
-  unless (staged_path / 'lib').exist?
-    FileUtils.mkdir_p(staged_path)
-    system '/bin/cp', '-R', '--',
-           cask.sourcefile_path.parent.parent / 'lib', staged_path
-  end
-  require staged_path / 'lib/utils.rb'
+  require 'utils/lgog_downloader'
 
   # nil was verified as official when first introduced to the cask
   url do
