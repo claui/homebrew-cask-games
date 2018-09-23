@@ -3,7 +3,7 @@ module Cask
     module LGOGDownloader
       module Constants
         BINARY_PATH =
-          '/usr/local/opt/lgogdownloader/bin/lgogdownloader'
+          "#{Formula['lgogdownloader'].opt_bin}/lgogdownloader"
           .freeze
 
         CACHE_PATH =
