@@ -1,7 +1,7 @@
 module Cask
   module Utils
     module GOG
-      class Installer
+      class Package
         DOWNLOAD_BASE_URL = 'https://www.gog.com/downlink'.freeze
 
         attr_reader :gamename, :id, :language, :name,

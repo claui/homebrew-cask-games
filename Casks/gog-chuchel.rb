@@ -6,8 +6,10 @@ cask 'gog-chuchel' do
 
   # nil was verified as official when first introduced to the cask
   url do
-    Utils::LGOGDownloader.installer_url 'chuchel',
-                                        'en2installer0'
+    installer = Utils::LGOGDownloader
+      .game('chuchel')
+      .installer('en2installer0')
+    Utils::LGOGDownloader.url(installer)
   end
   name 'CHUCHEL'
   homepage 'https://www.gog.com/game/chuchel'
@@ -18,8 +20,11 @@ cask 'gog-chuchel' do
   app 'CHUCHEL.app'
 
   preflight do
-    Utils::LGOGDownloader.rename_artifact! self, 'chuchel',
-                                           'en2installer0'
+    installer = Utils::LGOGDownloader
+      .game('chuchel')
+      .installer('en2installer0')
+    Utils::LGOGDownloader.rename_artifact! self, installer
+
     system_command '/usr/sbin/pkgutil',
                    args: [
                            '--expand',
