@@ -18,7 +18,7 @@ module Hbc
           %r{
             ^Set-Cookie:\s*([^;]*)=([^;]*).*;\s
             domain=\.gog\.com(;.*)?$
-          }x
+          }ix
 
         PROBE_URL = 'https://www.gog.com/account'.freeze
       end
