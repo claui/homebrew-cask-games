@@ -1,6 +1,6 @@
 cask 'gog-chuchel' do
-  version '1.0.0.19094'
-  sha256 '6fe648eb33db79ce6997dcaca3c867a0fb08b0243fc2eea39b349911c542bca4'
+  version '2.0.0.26125'
+  sha256 '3c582e76bdb1dc44cfdcf83eacb27f5b88fd3c7f27449d3d0c2bfb4e57f5135a'
 
   require 'utils/lgog_downloader'
 
