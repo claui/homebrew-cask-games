@@ -1,5 +1,5 @@
 cask 'gog-chuchel' do
-  version '1.0.0'
+  version '1.0.0.19094'
   sha256 '6fe648eb33db79ce6997dcaca3c867a0fb08b0243fc2eea39b349911c542bca4'
 
   require 'utils/lgog_downloader'
@@ -28,7 +28,7 @@ cask 'gog-chuchel' do
     system_command '/usr/sbin/pkgutil',
                    args: [
                            '--expand',
-                           staged_path / 'chuchel_enUS_1_0_0_19094.pkg',
+                           staged_path / "chuchel_enUS_#{version.dots_to_underscores}.pkg",
                            staged_path / 'pkg'
                          ]
     system_command '/bin/mv',
