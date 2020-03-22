@@ -1,5 +1,5 @@
 cask 'gog-undertale' do
-  version '1.08.18327'
+  version '1.08._a_.35937'
   sha256 '53dc2e3d3557f1f68904ba6c098d5ddba87857f030fd65a0296e3d482c20a348'
 
   require 'utils/lgog_downloader'
