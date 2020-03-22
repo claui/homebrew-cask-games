@@ -50,6 +50,7 @@ module Cask
 
       def self.rename_artifact!(cask, installer)
         target_name = installer.path.split('/').last
+        odebug "Moving #{installer.id} to #{target_name}"
 
         args = [
                  '--',
